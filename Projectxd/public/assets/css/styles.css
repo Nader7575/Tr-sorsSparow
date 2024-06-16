@@ -1,0 +1,1038 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
+.logo {
+  /* Placeholder for the logo */
+  width: 50px;
+  height: 50px;
+  background-color: #ccc; /* Placeholder color */
+  border-radius: 50%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+nav a {
+  text-decoration: none;
+  color: #000; /* Replace with the actual color code from the image */
+  font-weight: bold; /* Adjust font styling as needed */
+  text-transform: uppercase;
+  font-size: 17px;
+  width: 95%;
+  letter-spacing: normal;
+}
+
+nav a:hover {
+  color: rgb(19, 18, 18); /* Replace with the hover color code from the image */
+  border-bottom: 10px solid rgba(210, 72, 61, 1); /* Replace with the actual color code from the image */
+}
+
+/* pour afficher la barre de recherche au moment du clique*/
+
+.search {
+  right: 55px;
+  position: fixed;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  cursor: pointer;
+  display: inline-block;
+}
+
+/*Panier d'achat*/
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/******************************* Section hero en bas du header ***********************************
+
+/* Remplacez avec le chemin réel de votre image */
+.hero {
+  background-image: url("img/jeroen-den-otter-2b0JeJTEclQ-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0; /* Ajustez selon la taille souhaitée */
+  width: 100%;
+  height: auto;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 5em;
+  text-align: left; /* Alignez à gauche selon votre design */
+  padding: 0 15px; /* Ajustez pour le padding interne */
+  color: rgb(0, 0, 0); /* Couleur de texte adaptée à votre design */
+}
+
+.hero h1 {
+  font-size: 50px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 50px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background-color: black; /* Ajustez la couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  padding: 5px 5px; /* Ajustez le padding du bouton */
+  text-decoration: none; /* Enlève le soulignement du texte */
+  text-transform: uppercase; /* Met le texte en majuscules */
+  border: none; /* Enlève la bordure du bouton */
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Animation de fond lors du survol */
+  width: 216px;
+  height: 56px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #333; /* Couleur de fond du bouton au survol */
+}
+
+/*********************************************************Section des images en bas du hero***********************************/
+
+.product-section {
+  text-align: center;
+  padding: 50px 0; /* Ajustez selon l'espacement désiré */
+}
+
+.product-section p {
+  font-size: 18px;
+}
+
+.product-section-title {
+  margin-bottom: 30px; /* Ajustez selon l'espacement désiré */
+  text-transform: uppercase;
+  /* Appliquez ici d'autres styles de texte comme la taille de la police, la couleur, etc. */
+}
+
+.product-section-title a:hover {
+  color: rgb(19, 18, 18); /* Replace with the hover color code from the image */
+  border-bottom: 10px solid rgba(210, 72, 61, 1); /* Replace with the actual color code from the image */
+}
+
+.product-section-title a {
+  text-decoration: none;
+  color: #000; /* Replace with the actual color code from the image */
+  font-weight: bold; /* Adjust font styling as needed */
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.product-card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  /* Définir une taille fixe pour les cartes ou les rendre responsive avec max-width et width en % */
+}
+
+.product-card img {
+  width: 200 auto; /* Ajustez à la largeur désirée */
+  height: 300px; /* Cela gardera l'aspect ratio de l'image */
+  transition: transform 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25); /* Ajoute un box shadow avec l'RGBA spécifié */
+}
+
+.product-card img:hover {
+  transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+}
+
+.product-add {
+  position: absolute;
+  bottom: -10px; /* Ajustez selon l'espacement désiré */
+  right: -10px;
+  width: 45px; /* Taille du bouton */
+  height: 45px;
+  border-radius: 50%; /* Rend le bouton circulaire */
+  border: none;
+  background: rgba(210, 72, 61, 1); /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  cursor: pointer;
+}
+
+.view-collection .btn {
+  padding: 20px 20px;
+  margin-top: 30px; /* Ajustez selon l'espacement désiré */
+  text-decoration: none;
+  color: white;
+  background-color: black; /* Ajustez selon le style de votre bouton */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #333; /* Couleur de fond au survol */
+}
+
+/****************************** fleche gauch et droite******************************************/
+
+.product-section {
+  position: relative;
+  /* Autres styles de la section */
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%; /* Centrer verticalement par rapport à la section produit */
+  transform: translateY(-50%); /* Alignement vertical parfait */
+  background-color: white;
+  border: 2px solid #ccc; /* Ajustez selon votre design */
+  border-radius: 50%; /* Rond */
+  width: 60px; /* Taille du bouton */
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.left-arrow {
+  left: 20%; /* Distance du bord gauche de la section */
+}
+
+.right-arrow {
+  right: 20%; /* Distance du bord droit de la section */
+}
+
+.nav-arrow.special {
+  margin-bottom: 10%;
+}
+
+.arrow-icon {
+  font-size: 20px; /* Taille de la flèche */
+  color: black; /* Couleur de la flèche */
+  bottom: 5%;
+}
+.product-section button:hover {
+  background-color: #000;
+}
+
+.arrow-icon:hover {
+  color: white;
+}
+
+/****** paragraphe en bas de section title ********************/
+
+.collection-description {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Remplacez 'VotrePolice' par le nom de la police utilisée dans l'image */
+  font-size: 24px; /* Ajustez la taille de la police en fonction de l'image */
+  font-weight: normal; /* Ajustez le poids de la police si nécessaire */
+  margin-bottom: 2em; /* Espace après le titre */
+  text-align: center; /* Centrer le texte si nécessaire */
+  color: #8a8a8a; /* Couleur du texte, ajustez selon le style de l'image */
+  /* Autres propriétés de style de texte en fonction de l'image */
+}
+
+/*** Affichage des produits en bas de collection intense et elixir ***/
+
+.category-title {
+  margin-top: 10px; /* Space between the image and the title */
+  /* Apply additional styles for the title as necessary */
+}
+.category-section {
+  text-align: center;
+  padding: 50px 0; /* Adjust the padding as needed */
+}
+
+.categories-header {
+  margin-bottom: 30px; /* Adjust the spacing as needed */
+  /* Apply additional styles for the header as necessary */
+}
+
+.category-container {
+  display: flex;
+  justify-content: center; /* This will center the items in the container */
+  gap: 50px;
+}
+
+.category-item {
+  width: 35%; /* Set to 50% to have two items side by side */
+}
+
+.category-section .category-item img {
+  width: 100%; /* Assurez-vous que les images s'adaptent à la largeur de leurs conteneurs */
+  height: auto; /* Maintient le ratio d'aspect original de l'image */
+  transition: transform 0.3s ease; /* Effet de transition douce pour le transform */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25); /* L'ombre portée souhaitée */
+}
+
+.category-section .category-item img:hover {
+  transform: scale(1.05); /* Agrandit l'image de 5% au survol */
+}
+
+.category-title {
+  margin-top: 10px; /* Space between the image and the title */
+  /* Apply additional styles for the title as necessary */
+}
+
+/**** Debut section avec une grande image de fond et un texte ******/
+
+.promo-content {
+  position: relative; /* Position relative pour permettre un positionnement absolu du texte interne */
+  color: #fff; /* La couleur de votre texte */
+  max-width: 1200px; /* Max width pour la zone de contenu */
+  margin: 0 auto; /* Centrer dans la section */
+  padding: 0 20px; /* Padding pour ne pas coller les bords */
+}
+
+.promo-title {
+  font-size: 17px; /* Taille de la police pour le titre */
+  margin-bottom: 1rem; /* Espace après le titre */
+  text-transform: uppercase; /* Mettre le texte en majuscules */
+  font-weight: bold; /* Font plus épaisse */
+}
+
+.promo-description {
+  font-size: 1rem; /* Taille de la police pour la description */
+  line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+/******************** Début feature section*************/
+.feature-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre horizontalement */
+  text-align: center; /* Centre le texte à l'intérieur du bloc de texte */
+  width: 100%; /* Ajustez selon la largeur désirée */
+}
+
+.feature-image img {
+  width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+  height: 500px; /* Maintient les proportions de l'image */
+}
+
+.feature-content {
+  max-width: 45%; /* Ajustez la largeur du contenu textuel selon vos besoins */
+  text-align: left; /* Alignement du texte à gauche */
+}
+
+.feature-content h2 {
+  margin-top: 20px; /* Espacement sous le titre */
+  font-size: 0.9em;
+}
+
+.feature-content p {
+  margin-bottom: 30px; /* Espacement sous le paragraphe */
+  color: rgb(121, 121, 121);
+  font-size: 0.9em;
+}
+
+.feature-content .feature-link {
+  text-decoration: none;
+  color: #000; /* La couleur du texte pour votre lien */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease; /* Transition douce pour le survol */
+  font-size: 0.9em;
+}
+
+.feature-content .feature-link:hover {
+  color: rgb(19, 18, 18); /* Couleur du texte au survol */
+  border-bottom: 3px solid rgba(210, 72, 61, 1); /* Bordure inférieure pour l'effet au survol */
+}
+
+/******************** fin feature section*************/
+
+/******************** Début testimonials section *************/
+.testimonials-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: rgba(240, 237, 237, 1);
+}
+
+.testimonials-header h2 {
+  margin-bottom: 10px; /* Ajoutez les styles nécessaires pour le titre */
+}
+
+.testimonials-header p {
+  margin-bottom: 30px; /* Ajoutez les styles nécessaires pour le sous-titre */
+  color: rgba(124, 124, 124, 1);
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: space-around; /* Ajustez la répartition selon le nombre de témoignages */
+}
+
+.testimonial-item {
+  width: 30%; /* Ou ajustez la largeur en fonction du nombre de témoignages et de la largeur de la page */
+  padding: 20px;
+  background-color: rgba(241, 241, 241, 1);
+}
+
+.testimonial-name {
+  font-weight: bold; /* Ajoutez les styles nécessaires pour le nom */
+  margin-bottom: 5px;
+}
+
+.testimonial-rating {
+  margin-bottom: 5px; /* Ajoutez les styles nécessaires pour la notation */
+}
+
+.testimonial-comment {
+  font-style: italic; /* Ajoutez les styles nécessaires pour le commentaire */
+  margin-bottom: 5px;
+}
+
+.testimonial-detail {
+  color: #555; /* Ajoutez les styles nécessaires pour les détails */
+  font-size: smaller;
+}
+/********************Fin testimonials section *************/
+
+/********************Début services section *************/
+.services-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 50px 0;
+}
+
+.service-item {
+  display: grid;
+  grid-template-rows: auto auto 1fr; /* Crée trois rangées : icône, titre, texte */
+  gap: 10px; /* Espacement entre les éléments du grid */
+  align-items: center;
+  justify-items: center; /* Centre les éléments horizontalement */
+  text-align: center;
+  padding: 15px;
+  background: #f7f7f7; /* Fond blanc ou toute autre couleur souhaitée pour les éléments */
+}
+
+.service-item .icon {
+  font-size: 2rem; /* Ajustez la taille de l'icône */
+  margin-bottom: 10px;
+}
+
+.service-item h3 {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.service-item p {
+  font-size: 0.9rem;
+  color: rgba(168, 167, 167, 1);
+}
+/********************Fin services section *************/
+
+/* Début footer-section */
+.footer-section {
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Ceci crée un espace de 20px entre les colonnes et les lignes */
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 587px;
+}
+
+.footer-block h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-block p {
+  font-size: 14px;
+  width: 462px;
+  height: 86px;
+}
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+.footer-block ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 18px;
+}
+
+.footer-block ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-container::after {
+  content: "";
+  grid-column: 1 / -1; /* Cette ligne s'étendra sur toutes les colonnes */
+  height: 1px;
+  background: #fff; /* Couleur du séparateur */
+  width: 100%;
+}
+
+.footer-block:not(:last-child) {
+  border-right: 1px solid #fff; /* Ajoutez des bordures à droite de chaque bloc, sauf le dernier */
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  margin-right: -1px;
+  width: 388px;
+  height: 52px;
+}
+
+.newsletter-form button {
+  padding: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: px;
+  cursor: pointer;
+  height: 52px;
+  width: 52px;
+  right: 10em;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.email-icon {
+  position: absolute;
+  left: 10px; /* Ajustez la position horizontale de l'icône */
+  color: black;
+  height: 30px;
+  width: 30px;
+}
+
+.input-with-icon input[type="email"] {
+  padding-left: 40px; /* Espace pour l'icône à l'intérieur du champ de saisie */
+  /* Ajoutez ici le reste de vos styles pour le champ de saisie */
+}
+
+/* Ajout du séparateur blanc */
+.footer-separator {
+  height: 1px;
+  background-color: #fff;
+  margin: 0 auto; /* Centre le séparateur dans le footer */
+  width: 100%; /* Ou la largeur que vous préférez */
+}
+
+.footer-bottom {
+  background-color: #000; /* Ou toute autre couleur que vous utilisez pour le footer */
+}
+
+.footer-bottom p {
+  font-size: 20px;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 333px;
+}
+
+.footer-copy {
+  color: #fff;
+  /* Ajoutez tout autre style pour le texte de copyright ici */
+}
+
+/* Pour les icônes de paiement, vous utiliserez probablement des balises img ou des éléments SVG. Exemple: */
+.footer-payment-icons img {
+  margin-left: 10px; /* Espace entre les icônes */
+  width: 50px; /* Ou la taille préférée pour vos icônes */
+}
+
+/* Fin footer-section */
+
+/*********** pour Nos parfums ******************************/
+
+body,
+h1,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: rgb(
+    233,
+    233,
+    233
+  ); /* Adjust color to match the exact shade in the image */
+  padding: 100px;
+  text-align: center;
+  width: 100%;
+  height: 252px;
+}
+
+.header h1 {
+  color: rgb(4, 4, 4);
+  font-size: 20px; /* Adjust size as needed */
+  margin-bottom: 0.5em; /* Adjust spacing as needed */
+}
+
+.breadcrumb {
+  color: white;
+  font-size: 20px; /* Adjust size as needed */
+}
+
+.breadcrumb {
+  color: white;
+  font-size: 20px; /* Adjust size as need ed */
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize; /* Ceci va mettre la première lettre en majuscule */
+}
+
+.breadcrumb a:hover {
+  text-decoration: none; /* adds underline on hover for better user experience */
+  color: white;
+}
+
+/* Below is the new section you asked for */
+.new-section {
+  padding: 20px; /* Adjust padding as needed */
+  background-color: #ffffff; /* This is white, change if needed */
+}
+
+/******************************contact formulaire de contact*************************************/
+
+.contact-section {
+  background: #ffffff; /* Couleur de fond de la section du formulaire */
+  padding: 50px; /* Espacement à l'intérieur de la section */
+  width: 100%;
+  height: 115px;
+  margin-bottom: 5%;
+}
+
+.contact-section h1 {
+  color: #333; /* Couleur du titre */
+  margin: 0 0 10px 0; /* Espacement autour du titre */
+  font-size: 72px; /* Taille du texte du titre */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.contact-section p {
+  color: #666; /* Couleur du paragraphe */
+  font-size: 16px; /* Taille du texte du paragraphe */
+  text-align: left;
+  font-size: 24px;
+}
+
+/***********************Formulaire form **********************************************/
+.contact-container {
+  display: flex;
+  width: 100%; /* Assurez-vous que le conteneur remplit la largeur de la page */
+}
+
+.form-container,
+.info-container {
+  box-sizing: border-box; /* Assurez-vous que padding et border sont inclus dans la largeur totale */
+  width: 50%; /* Diviser en deux colonnes égales */
+  padding: 20px;
+  margin-bottom: 10%;
+}
+
+/* Ajouter des styles supplémentaires pour le formulaire */
+.form-container input,
+.form-container textarea {
+  width: 100%; /* Les champs de formulaire prennent toute la largeur */
+  padding: 10px;
+  margin-bottom: 10px; /* Espacement entre les champs */
+  border: 1px solid #ddd; /* Couleur de la bordure ajustée pour correspondre à l'image */
+}
+
+.info-container {
+  padding-left: 40px; /* Espacement entre les colonnes */
+}
+
+.info-container h3 {
+  margin-bottom: 0.5em;
+}
+
+.info-container p {
+  margin-bottom: 1em;
+  color: rgba(
+    152,
+    152,
+    152,
+    1
+  ); /* Couleur du texte pour correspondre à l'image */
+  font-size: 24px;
+}
+
+/*pour le mobile*/
+.menu-toggle {
+  display: none; /* Afficher le bouton hamburger ici */
+  background: none;
+  border: none;
+  /* Plus de styles pour votre bouton hamburger */
+}
+
+/* Styles mobiles spécifiques */
+/**********************************************header*****************************/
+@media (max-width: 768px) {
+  .logo {
+    margin: 0px 120px;
+    width: 63px;
+    height: 40px;
+  }
+
+  nav ul {
+    display: none; /* Masquer le menu de navigation complet sur mobile */
+  }
+
+  .menu-toggle {
+    display: block; /* Afficher le bouton hamburger ici */
+    background: none;
+    border: none;
+    order: -1; /* Place le menu hamburger à gauche */
+    cursor: pointer;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between; /* Espacer les éléments de l'en-tête */
+    padding: 10px; /* Ajouter un padding selon les besoins */
+  }
+}
+
+/**********************************************hero en bas du header*****************************/
+@media (max-width: 768px) {
+  .hero {
+    background-image: url("img/jeroen-den-otter-2b0JeJTEclQ-unsplash.jpg"); /* Image de fond pour la version mobile */
+    height: 200px; /* Hauteur ajustée pour les appareils mobiles */
+    background-color: rgba(240, 237, 237, 1);
+  }
+
+  .hero h1 {
+    font-size: 20px; /* Taille de la police réduite pour l'espace mobile */
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .hero p {
+    font-size: 1em; /* Taille de la police réduite pour l'espace mobile */
+    text-align: center;
+  }
+
+  .hero p,
+  .btn {
+    font-size: 14px;
+  }
+
+  .hero a .btn {
+    text-align: center;
+    padding: 10px 20px; /* Taille du bouton ajustée pour les appareils mobiles */
+  }
+
+  /* Media query pour les tablettes */
+  @media (max-width: 768px) {
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+      /* Deux produits par ligne sur tablette */
+    }
+  }
+
+  /* Media query pour les téléphones mobiles */
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+      /* Une seule colonne de produits sur mobile */
+    }
+
+    .product-section-title {
+      font-size: smaller;
+
+      /* Réduisez la taille de police pour les mobiles */
+    }
+
+    .product-section {
+      /* Réduisez la taille de police pour les mobiles */
+      margin-top: 40%;
+    }
+
+    .nav-arrow {
+      display: none;
+      /* Cachez les flèches de navigation sur les petits écrans */
+    }
+
+    .view-collection .btn {
+      display: inline-block;
+      background-color: black;
+      color: white;
+      padding: 20px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      width: 216px;
+      height: 56px;
+      align-items: center;
+      background-color: white;
+      color: #000;
+      border: #000 solid 1px;
+    }
+  }
+
+  .product-section-special {
+    margin-top: -20px; /* Décale la section vers le haut de 20px */
+  }
+
+  @media (max-width: 768px) {
+    /* ou toute autre largeur à laquelle vous voulez passer à deux images */
+    .product-grid {
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); /* Deux images par ligne sur petits écrans */
+      margin-right: 3%;
+    }
+
+    .product-card.hide-on-mobile {
+      display: none; /* Les éléments avec cette classe seront masqués sur les écrans mobiles */
+    }
+
+    .product-card img {
+      max-width: 100%; /* Réduire la taille de l'image à 50% de la .product-card */
+      margin: 0 auto; /* Centrer l'image si elle est plus petite que la .product-card */
+      height: 100%;
+    }
+    .product-card {
+      padding: 10px; /* Ajouter du padding autour de l'image pour plus d'espace */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .category-container {
+      display: flex;
+      flex-direction: column; /* empile les éléments verticalement pour les petits écrans */
+    }
+  }
+
+  .category-item {
+    width: 100%; /* chaque élément prend la moitié de la largeur du conteneur */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .promo-section {
+    padding: 20px; /* Plus de padding pour une meilleure lecture sur mobile */
+    width: 100%;
+    height: 600px;
+  }
+
+  .promo-content h2 {
+    font-size: 1.2em; /* Encore plus petit pour mobile */
+  }
+
+  .promo-button {
+    padding: 8px 16px; /* Bouton plus petit pour mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-section {
+    flex-direction: column; /* Empilez l'image et le contenu verticalement sur les écrans plus petits */
+  }
+
+  .feature-content h2,
+  .feature-content p {
+    font-size: smaller; /* Ajustez la taille de la police pour les petits écrans */
+    width: 420px;
+    text-align: center;
+  }
+
+  .feature-content h2 {
+    text-transform: uppercase;
+  }
+
+  .feature-content .feature-link {
+    font-size: smaller; /* Ajustez la taille de la police pour les petits écrans */
+  }
+
+  .feature-image img {
+    width: 315px;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .feature-content {
+    max-width: 150%;
+    text-align: left;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .service-item {
+    /* Ajustez la largeur pour contrôler combien d'éléments apparaissent par ligne */
+    width: calc(50% - 40px); /* Exemple pour 2 éléments par ligne */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-block {
+    text-align: left;
+    padding: 4em;
+    height: 350px;
+  }
+
+  .footer-block p {
+    width: auto;
+    color: white;
+  }
+
+  .footer-bottom {
+    background-color: rgba(210, 72, 61, 1);
+  }
+
+  .footer-bottom p {
+    color: white;
+  }
+
+  form.newsletter-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-section h1 {
+    font-size: 2em;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container {
+    margin-top: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+  }
+}
+
+/*Panier */
+
+@media (max-width: 768px) {
+  .cart-container {
+    text-align: center; /* Centre le texte verticalement et horizontalement */
+    width: 100%; /* Utilisation de toute la largeur pour centrer le texte */
+    position: relative;
+    padding: 100px 100px 640px 100px; /* Ajoute un padding spécifique en bas */
+    box-sizing: border-box; /* S'assure que le padding ne change pas la largeur définie */
+  }
+
+  h1 {
+    font-size: 24px; /* Taille de police pour le titre */
+    color: #000; /* Couleur de texte noir */
+    margin: 20px 0; /* Espacement autour du titre */
+  }
+
+  p {
+    font-size: 16px; /* Taille de police pour le paragraphe */
+    color: #666; /* Gris pour le texte */
+  }
+
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px; /* Grande croix pour la fermeture */
+    border: none; /* Pas de bordure */
+    background: none; /* Pas de fond */
+    cursor: pointer;
+  }
+}
+
+/*Panier */
